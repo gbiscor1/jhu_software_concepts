@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="home-container">
+    <div class="home-text">
+        <p>WELCOME TO MY WORLD</p>
+        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+        <h2>a <strong>Developer</strong>.</h2>
+        <p class="bio">I use animation as a third dimension by which to simplify experiences and guiding through each and every interaction.</p>
+    </div>
+    <div class="home-image">
+        <img src="{{ url_for('static', filename='images/linkedinpic.jpg') }}" alt="Your Photo">
+    </div>
+</section>
+{% endblock %}
