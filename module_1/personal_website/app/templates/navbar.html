@@ -1,25 +1,27 @@
 <nav class="navbar" aria-label="Primary">
-  <ul class="nav-right">
-    <li>
-      <a href="{{ url_for('pages.home') }}"
-         class="{{ 'active' if request.endpoint=='pages.home' else '' }}"
-         {% if request.endpoint=='pages.home' %}aria-current="page"{% endif %}>
-        Home
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('pages.projects') }}"
-         class="{{ 'active' if request.endpoint=='pages.projects' else '' }}"
-         {% if request.endpoint=='pages.projects' %}aria-current="page"{% endif %}>
-        Projects
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('pages.contact') }}"
-         class="{{ 'active' if request.endpoint=='pages.contact' else '' }}"
-         {% if request.endpoint=='pages.contact' %}aria-current="page"{% endif %}>
-        Contact
-      </a>
-    </li>
-  </ul>
+  <div class="container">
+    <ul class="nav-right">
+      <li>
+        <a href="{{ url_for('pages.home') }}"
+           class="{{ 'active' if request.endpoint=='pages.home' else '' }}"
+           {% if request.endpoint=='pages.home' %}aria-current="page"{% endif %}>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('pages.projects') }}"
+           class="{{ 'active' if request.endpoint=='pages.projects' else '' }}"
+           {% if request.endpoint=='pages.projects' %}aria-current="page"{% endif %}>
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('pages.contact') }}"
+           class="{{ 'active' if request.endpoint=='pages.contact' else '' }}"
+           {% if request.endpoint=='pages.contact' %}aria-current="page"{% endif %}>
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>

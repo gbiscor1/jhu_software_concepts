@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Projects{% endblock %}
 {% block content %}
-<section class="content-section">
-  <h2>Module 1 — Personal Website</h2>
-  <p>Short blurb about what this site demonstrates (Flask, templates, CSS, nav).</p>
-  <p>GitHub: <a href="https://github.com/yourusername/jhu_software_concepts" target="_blank" rel="noopener">Repository</a></p>
+<section class="projects">
+  <h1>Projects</h1>
+  <div class="projects-grid">
+    {% for project in projects %}
+      {% include "_project_card.html" %}
+    {% endfor %}
+  </div>
 </section>
 {% endblock %}

@@ -1,0 +1,19 @@
+<article class="project-card">
+  <img class="project-image"
+       src="{{ url_for('static', filename=project.image) }}"
+       alt="{{ project.title }} preview">
+
+  <div class="project-body">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.desc }}</p>
+
+    <div class="project-actions">
+      {% for link in project.links %}
+        <a class="btn"
+           href="{{ link.href }}" target="_blank" rel="noopener">
+          {{ link.label }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</article>

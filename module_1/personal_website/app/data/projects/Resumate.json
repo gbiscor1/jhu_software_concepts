@@ -1,0 +1,12 @@
+{
+  "title": "RSUMATE",
+  "desc": "AI powered resume and cover letter tailoring!! BYOK GPT powered application companion for your browswer. Job scrapping, resume tailoring, and cover letter generation all in one place. HELP ME TEST IT ***PLEASE***: become a beta tester today!! Contact me for access.",
+  "image": "images/resumate.png",
+  "order": 1,
+  "links": [
+    {
+      "label": "Watch Demo",
+      "href": "https://github.com/gbisco/Shinkansen-Travel-Experience-Hackathon"
+    }
+  ]
+}

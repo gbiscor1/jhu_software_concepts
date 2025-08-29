@@ -1,0 +1,12 @@
+{
+  "title": "Shinkansen Travel Experience Hackathon",
+  "desc": "Applied machine learning techniques to predict customer satisfaction on Shinkansen bullet trains. Explored multiple models; XGBoost achieved the highest accuracy.",
+  "image": "images/hackathon-thumb.png",
+  "order": 2,
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/gbisco/Shinkansen-Travel-Experience-Hackathon"
+    }
+  ]
+}

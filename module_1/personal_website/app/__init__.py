@@ -1,4 +1,7 @@
-# webapp/__init__.py
+# __init__.py
+# Initializes the Flask application.
+# Sets template and static folders, and registers the routes blueprint.
+
 from flask import Flask
 from .routes import bp
 
