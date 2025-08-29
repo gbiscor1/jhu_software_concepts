@@ -14,12 +14,8 @@ Instructions
 ------------
 1. Clone or download this repository to your computer.
 2. Open a terminal in the project root folder.
-3. Create a virtual environment:
-   Windows:  python -m venv venv
-   Linux/Mac: python3 -m venv venv
-4. Activate the virtual environment:
-   Windows:  venv\Scripts\activate
-   Linux/Mac: source venv/bin/activate
+3. Create a virtual environment.
+4. Activate the virtual environment.
 5. Install dependencies:
    pip install -r requirements.txt
 6. Start the application:
@@ -29,10 +25,10 @@ Instructions
 
 Disclaimer
 ----------
-The base HTML templates (home.html, contact.html, projects.html) 
+The HTML templates (home.html, contact.html, projects.html) 
 and the stylesheet (style.css) were initially generated using ChatGPT. 
 They were then manually reviewed, patched, and customized to satisfy the 
-assignment requirements and achieve the desired look and behavior.
+assignment requirements and achieve the desired style.
 
 Project tree from root
 ------------------------
@@ -42,22 +38,29 @@ jhu_software_concepts/
         ├── run.py              
         ├── requirements.txt    
         ├── README.txt         
-        ├── __init__.py         
-        ├── routes.py           
+        ├── __init__.py -> Initializes flask       
+        ├── routes.py   -> page router and helper function for loading project data        
         ├── templates/          
-        │   ├── base.html
-        │   ├── home.html
-        │   ├── contact.html
-        │   ├── projects.html
-        │   └── _project_card.html
+        │   ├── base.html  -> Base template to be extended
+        │   ├── home.html  -> Extension of base
+        │   ├── contact.html -> Extension of base
+        │   ├── projects.html  -> Extension of base, board for card snapping
+        │   └── _project_card.html -> modular project container for snapping into projects.html
         ├── static/
         │   ├── css/
-        │   │   └── style.css
-        │   └── images/
-        │       └── projects/
+        │   │   └── style.css  -> File for styles in the whole project
+        │   └── images/ -> directory with all images
+        │      
         │           
-        ├── data/
+        ├── data/  -> Project JSON files for snapping
         │   └── projects/
         │     
         └── screenshots/
             └── screenshots.pdf 
+
+References and Images
+---------------------------
+https://www.freepik.com/free-vector/emotion-detection-abstract-concept-vector-illustration-speech-emotional-state-recognition-emotion-detection-from-text-sensor-technology-machine-learning-ai-reading-face-abstract-metaphor_11668839.htm?epik=dj0yJnU9bmR5aXg3NlphUFpUSENsbDNNSnFnSjZjcWxlN3VyNk8mcD0wJm49UXd0d2M0eXcwVHNRNTA5SndhTWQ5ZyZ0PUFBQUFBR2l5Qy13
+https://klaxoon.com/community-content/organizing-a-hackathon-appeal-to-the-teams-competitive-spirit-and-come-up-with-innovative-solutions
+https://www.sliderrevolution.com/design/one-page-website-template/
+https://realpython.com/flask-project/

@@ -1,10 +1,12 @@
 /* style.css
    ----------
-   stylesheet for the website.
-   Defines layout, colors, typography, navbar, home, contact, and projects styling.
-   TODO: split into multiple CSS files if it gets too large.
+   Main stylesheet for my personal website.
+   Handles colors, layout, and styling for navbar, home, projects, and contact pages.
+   (Started with ChatGPT’s help, then patched and tweaked manually)
+   TODO: if this file grows too big, split into multiple CSS files based on website pages.
 */
-/* ****style css created with chat gpt then modified and patched***** */
+
+/* ---- Overall page look ---- */
 
 
 body {
@@ -14,14 +16,14 @@ body {
     color: #f0f0f0;
 }
 
-/* Container for all pages */
+/* ---- Shared page container ---- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* NAVBAR */
+/* ---- Navbar ---- */
 .navbar {
     background-color: #111;
     padding: 1rem 0;
@@ -52,7 +54,7 @@ body {
     color: #fff;
 }
 
-/* HOME PAGE */
+/* Home page */
 .home-container {
     display: flex;
     flex-wrap: wrap;
@@ -84,19 +86,36 @@ body {
     line-height: 1.6;
 }
 
+/* Welcome message above name */
+.welcome_msg {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d0d0d0;
+  margin: 0 0 0.75rem;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+}
+
+/* Bio paragraph */
+.bio {
+  margin-top: 1rem;
+  max-width: 56ch;
+}
+
 .highlight {
     color: #ff3264;
 }
 
+/* right side profile image card */
 .home-image {
     flex: 1;
     min-width: 250px;
     max-width: 400px;
 
     display: flex;
-    justify-content: center;   /* center the card in its column */
+    justify-content: center;
 }
 
+/* card behind portrait */
 .portrait {
     position: relative;
     width: clamp(280px, 40vw, 420px);
@@ -110,7 +129,7 @@ body {
     align-items: center;
 }
 
-/* soft inner glow / spotlight */
+/* soft spotlight effect inside card */
 .portrait::before {
     content: "";
     position: absolute;
@@ -135,14 +154,25 @@ body {
 }
 
 
-/* Contact + Projects Shared Section */
+/* Shared Section */
 .content-section {
+    
     padding: 2rem 1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* Responsive Adjustments */
+.contact a {
+  color: #ff3264;          
+  text-decoration: none; 
+}
+
+.contact a:hover {
+  color: #ff5c85;
+  text-decoration: underline;
+}
+
+/* ---- Responsive tweaks for mobile ---- */
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column;
@@ -173,7 +203,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;              /* increase vertical space between cards */
+    gap: 40px;
 }
 
 .project-card {
@@ -187,11 +217,11 @@ body {
     flex-direction: column;
     align-items: center;
 
-    /* soft shadow */
     box-shadow: 0 10px 28px rgba(0,0,0,0.55);
     position: relative;
 }
 
+/* soft glow overlay for project cards */
 .project-card::before {
     content: "";
     position: absolute;
@@ -205,14 +235,14 @@ body {
     pointer-events: none;
 }
 
-
+/* project image */
 .project-image {
     width: 100%;
-    height: auto;              /* let it keep aspect ratio */
+    height: auto;
     object-fit: cover;
 }
 
-
+/* project text body */
 .project-body {
     padding: 14px;
 }

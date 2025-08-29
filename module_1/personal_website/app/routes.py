@@ -2,13 +2,13 @@
 # ----------
 # Defines the main Flask blueprint for the personal website.
 # Includes routes for Home (/), Contact (/contact), and Projects (/projects).
-# The helper function load_projects() loads project data from JSON files.
+# Helper function load_projects() loads project data from JSON files.
 
 from flask import Blueprint, render_template, current_app, url_for
 import os
 import json
 
-
+# initialize blueprint
 bp = Blueprint("pages", __name__)
 
 
@@ -25,8 +25,9 @@ def load_projects():
         for fname in os.listdir(projects_dir):
             if fname.endswith(".json"):
                 with open(os.path.join(projects_dir, fname), "r", encoding="utf-8") as f:
+                    # load and append project data to grid
                     projects.append(json.load(f))
-    # sort by "order"
+    # sort by "order" determined in json file
     projects.sort(key=lambda x: x.get("order", 999))
     return projects
 

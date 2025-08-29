@@ -2,7 +2,7 @@
   "title": "Facial Emotion Recognition AI Model",
   "desc": "This project demonstrates the application of deep learning techniques for facial emotion recognition using transfer learning and custom CNNs. By leveraging pre-trained convolutional neural networks (CNNs) such as VGG16, ResNet50, and EfficientNet, the model are fine-tuned to classify emotions from facial images into predefined categories.",
   "image": "images/MIT-thumb.jpg",
-  "order": 3,
+  "order": 4,
   "links": [
     {
       "label": "GitHub",

@@ -1,0 +1,12 @@
+{
+  "title": "This Website",
+  "desc": "Personal portfolio website built in flask. Feel free to check out the code on github!",
+  "image": "images/website-thumb.jpg",
+  "order": 2,
+  "links": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/gbiscor1/jhu_software_concepts/tree/main/module_1/personal_website"
+    }
+  ]
+}
