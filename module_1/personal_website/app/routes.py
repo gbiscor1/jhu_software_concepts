@@ -31,6 +31,25 @@ def load_projects():
     projects.sort(key=lambda x: x.get("order", 999))
     return projects
 
+def load_educations():
+    """
+    Helper function:
+    ----------------
+    Reads all JSON files inside app/data/educations/ and returns them
+    as a list of education dictionaries.
+    """
+    educations_dir = os.path.join(current_app.root_path, "data", "educations")
+    educations = []
+    if os.path.isdir(educations_dir):
+        for fname in os.listdir(educations_dir):
+            if fname.endswith(".json"):
+                with open(os.path.join(educations_dir, fname), "r", encoding="utf-8") as f:
+                    # load and append education data to grid
+                    educations.append(json.load(f))
+    # sort by "order" determined in json file
+    educations.sort(key=lambda x: x.get("order", 999))
+    return educations
+
 @bp.route("/")
 def home():
     return render_template("home.html")
@@ -42,3 +61,7 @@ def contact():
 @bp.route("/projects")
 def projects():
     return render_template("projects.html", projects=load_projects())
+
+@bp.route("/education")
+def education():
+    return render_template("education.html", educations=load_educations())
