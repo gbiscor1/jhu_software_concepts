@@ -1,0 +1,13 @@
+data/
+__MACOSX/
+*.zip
+*.jsonl
+*.tmp
+module_2\llm_hosting\models\
+data/
+__MACOSX/
+.pytest_cache/
+*.zip
+*.jsonl
+*.tmp
+module_2/llm_hosting/models/
