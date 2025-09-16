@@ -104,15 +104,23 @@ jhu_sc/
 ## Acknowledgments
 
 The following artifacts were initially generated with GPT and then reviewed, edited, and integrated by me:
+
 -All SQL query files under module_3/sql/queries/q*.sql
+
 -All HTML templates in module_3/app/templates/
+
 -Stylesheet at module_3/app/static/styles.css
+
 -All test files
+
 -Project .gitignore
 
 Improvements suggested by the LLM that I adopted and adapted:
+
 -Environment & secrets: use a .env file loaded in code (via python-dotenv), ship a .env.example, keep .env out of version control, and document setup in the README.
+
 -Scraper orchestration (application/scrapper_cli_caller.py): run the scraper without LLM first, then do a single LLM pass after cleaning to improve reliability and avoid crashy multi-pass behavior.
+
 -Most messages flowing from application and data layer to frontend for debugging
 
 ## References
