@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}GradCafe Analysis{% endblock %}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <!-- Header -->
+  <header class="page-header">
+    <div class="brand">
+      <h1>GradCafe Analysis</h1>
+      <div class="sub">Saved queries & controls</div>
+    </div>
+
+    <nav class="actions">
+      <!-- Pull Data -->
+      <form method="post" action="{{ url_for('main.pull_data') }}">
+        <button type="submit" class="btn primary">Pull Data</button>
+      </form>
+      <!-- Update Analysis-->
+      <form method="post" action="{{ url_for('main.update_analysis') }}">
+        <button type="submit" class="btn">Update Analysis</button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-stack">
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <!-- Main grid slot -->
+  <main class="grid">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

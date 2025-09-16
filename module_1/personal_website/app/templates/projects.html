@@ -1,0 +1,18 @@
+<!--- Extension of base.html template--->
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<!-- Projects Page
+     ----------------
+     This page shows my work as a grid of cards.
+     Each card has an image, title, short description, and links/buttons. --->
+     
+<section class="projects">
+  <h1>Projects</h1>
+  <div class="projects-grid">
+    {% for project in projects %}
+      {% include "_project_card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

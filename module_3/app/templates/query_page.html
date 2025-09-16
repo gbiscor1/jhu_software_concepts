@@ -1,0 +1,14 @@
+{% extends "grid_template.html" %}
+{% block title %}GradCafe Analysis — Queries{% endblock %}
+
+{% block content %}
+  {# results is a dict: { "q01_....json": {"sql": "<question>", "result": <answer>}, ... } #}
+  {% for fname, payload in results|dictsort %}
+    {# Title is just Q1, Q2, ... based on render order #}
+    {% set name = 'Q' ~ loop.index %}
+    {% set sql = payload['sql'] %}
+    {% set result = payload['result'] %}
+
+    {% include "query_card.html" with context %}
+  {% endfor %}
+{% endblock %}

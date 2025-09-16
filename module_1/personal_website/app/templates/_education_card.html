@@ -1,0 +1,20 @@
+<!--- Snap-in education card for the grid -->
+<article class="education-card">
+  <img class="education-image"
+       src="{{ url_for('static', filename=education.image) }}"
+       alt="{{ education.title }} preview">
+
+  <div class="education-body">
+    <h3>{{ education.title }}</h3>
+    <p>{{ education.desc }}</p>
+
+    <div class="education-actions">
+      {% for link in education.links %}
+        <a class="btn"
+           href="{{ link.href }}" target="_blank" rel="noopener">
+          {{ link.label }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</article>

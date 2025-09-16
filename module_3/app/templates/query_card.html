@@ -1,0 +1,39 @@
+{# module_3/app/templates/query_card.html #}
+{% from "card_template.html" import card %}
+
+{# expects: name (filename), sql (question string), result (scalar or list[dict]) #}
+{% set title = name %}
+
+{% set body %}
+  <details class="sql-wrap" open>
+    <summary>Question</summary>
+    <pre class="sql-block">{{ sql }}</pre>
+  </details>
+
+  {% if result is number or (result is string) %}
+    <div class="big-number">{{ result }}</div>
+  {% elif result is sequence and result|length > 0 and result[0] is mapping %}
+    <table class="table">
+      <thead>
+        <tr>
+          {% for k in result[0].keys() %}
+            <th>{{ k }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in result %}
+          <tr>
+            {% for v in row.values() %}
+              <td>{{ v }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div class="muted">No rows.</div>
+  {% endif %}
+{% endset %}
+
+{{ card(title, None, body) }}

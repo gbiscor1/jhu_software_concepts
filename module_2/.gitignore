@@ -1,0 +1,65 @@
+# --- Python bytecode, builds, tools ---
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# --- Virtual environments (root and nested) ---
+.venv/
+**/.venv/
+venv/
+**/venv/
+env/
+**/env/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+
+# --- Env / secrets ---
+.env
+*.env
+!.env.example          # keep sample envs tracked
+
+# --- Logs / temp ---
+*.log
+tmp/
+*.tmp
+
+# --- LLM models & large binaries (Module 2) ---
+module_2/models/
+module_2/models/*
+*.gguf
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# --- LLM runner scratch (Module 2) ---
+module_2/llm_hosting/in.json
+module_2/llm_hosting/out.json
+module_2/mini_in.json
+module_2/llm_hosting/*.log
+
+# --- Generated analysis cards (Module 3) ---
+# If you prefer not to commit the cards, leave this enabled:
+module_3/app/data/*.json
+
+# Keep the empty models folder if you add a .gitkeep
+!module_2/models/.gitkeep

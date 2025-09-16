@@ -1,0 +1,18 @@
+<!--- Extension of base.html template--->
+{% extends "base.html" %}
+{% block title %}educations{% endblock %}
+{% block content %}
+<!-- education Page
+     ----------------
+     This page shows my work as a grid of cards.
+     Each card has an image, title, short description, and links/buttons. --->
+     
+<section class="education">
+  <h1>Degrees & Certifications</h1>
+  <div class="education-grid">
+    {% for education in educations %}
+      {% include "_education_card.html" %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
