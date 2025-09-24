@@ -1,0 +1,13 @@
+# .readthedocs.yaml
+version: 1
+
+build:
+  os: windows-10.0.19043
+  tools:
+    python: "3.12"
+
+sphinx:
+  configuration: module_4/docs/source/conf.py
+python:
+  install:
+    - requirements: module_4/requirements.txt
