@@ -1,0 +1,155 @@
+# ---------------------------------
+# Python bytecode, builds, metadata
+# ---------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+dist/
+build/
+wheelhouse/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.manifest
+
+# ----------------
+# Virtual envs
+# ----------------
+.venv/
+venv/
+env/
+ENV/
+.pyenv/
+.conda/
+conda-env/
+
+# ----------------
+# Test & coverage
+# ----------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/            # pytest/other tools
+
+# ----------------
+# Type/checker caches
+# ----------------
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ----------------
+# Editors/IDEs
+# ----------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -------------
+# OS cruft
+# -------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ----------------
+# Env / secrets
+# ----------------
+.env
+.env.*
+*.env
+.envrc
+*.key
+*.pem
+*.pfx
+*.crt
+
+# -------------
+# Logs & temp
+# -------------
+*.log
+logs/
+tmp/
+temp/
+*.pid
+
+# ----------------
+# Databases / dumps
+# ----------------
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+*.bak
+
+# ----------------
+# Notebooks
+# ----------------
+.ipynb_checkpoints/
+
+# ----------------
+# Sphinx / docs
+# ----------------
+# If NOT required to commit built HTML, keep these ignores:
+docs/_build/
+docs/build/
+# If assignment requires committing HTML, remove the two lines above.
+
+# ----------------
+# App runtime artifacts
+# ----------------
+# Generated analysis cards (runtime outputs)
+src/app/data/*.json
+module_4/src/app/data/*.json
+
+# ----------------
+# Large models / LLM artifacts (llama, HF, etc.)
+# ----------------
+models/
+model/
+checkpoints/
+*.bin
+*.bin.*
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.ggml
+*.gguf
+*.onnx
+*.tflite
+*.pb
+*.spm
+*.model
+*.faiss
+*.ann
+
+# Hugging Face caches (repo-local)
+.huggingface/
+.hf_cache/
+.hf_cache_dir/
+.cache/huggingface/
+# (Global user cache like ~/.cache/huggingface is outside repo and cannot be ignored here)
+
+# Tokenizers / compiled extension byproducts
+tokenizers/
+*.so
+*.dll
+*.dylib
+
+# ----------------
+# Local data & seeds (optional; uncomment to keep repo light)
+# ----------------
+# data/**/*.json
+# data/**/*.jsonl
+# data/**/*.csv
+# data/**/*.parquet
