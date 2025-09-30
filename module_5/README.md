@@ -1,4 +1,4 @@
-### JHU EP 605.256 — Assignment 5: Software Assurance
+# JHU EP 605.256 — Assignment 5: Software Assurance
 
 Student: Gabriel Bisco Reinato
 
@@ -40,36 +40,36 @@ python -m venv .venv
 pip install -r requirements.txt
 
 ## Linting (pylint)
-# from module_5/
+ from module_5/
 pylint --rcfile=.pylintrc --recursive=y -j 0 src tests
 
 ## Dependency graphs (pydeps)
-# from module_5/
+ from module_5/
 $env:PYTHONPATH = "$PWD"
 
-# whole app graph
+whole app graph
 python -m pydeps src -T svg -o dependency.svg --noshow `
   --pylib --pylib-all --max-bacon 2 --cluster --rmprefix src. `
   --only src.app,src.application,src.data,src.sql
 
-# focused graphs
+focused graphs
 python -m pydeps src/app/__init__.py -T svg -o src_app___init__.svg --noshow
 python -m pydeps src/run.py          -T svg -o src_run.svg         --noshow
 
 Snyk scan
-# from module_5/
+from module_5/
 npm install -g snyk
 snyk auth
 snyk test --file=requirements.txt --package-manager=pip --skip-unresolved
 
 ## Testing
-# from module_5/
+from module_5/
 pytest -q
 pytest --cov=src --cov-report=term-missing
 pytest --cov=src --cov-report=html  # open htmlcov/index.html
 
 ## Run app
-# from module_5/
+from module_5/
 python src/scripts/init_db.py
 python src/run.py
 open http://127.0.0.1:5000
@@ -77,12 +77,18 @@ open http://127.0.0.1:5000
 Project layout
 module_5/
 ├─ .gitignore
+|
 ├─ .pylintrc
+|
 ├─ README.md
+|
 ├─ requirements.txt
+|
 ├─ src/
 │  ├─ __init__.py
+│  |
 │  ├─ run.py
+│  |
 │  ├─ app/
 │  │  ├─ __init__.py
 │  │  ├─ routes.py
