@@ -1,0 +1,83 @@
+# Python bytecode, builds, metadata
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+dist/
+build/
+wheelhouse/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.manifest
+
+# Virtual envs (local to module_5)
+.venv/
+venv/
+env/
+ENV/
+.pyenv/
+.conda/
+conda-env/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.cache/
+
+# Type/checker caches
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS cruft
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Env / secrets
+.env
+.env.*
+*.env
+.envrc
+*.key
+*.pem
+*.pfx
+*.crt
+
+# Logs & temp
+*.log
+logs/
+tmp/
+temp/
+*.pid
+
+# Databases / dumps (be specific; DO NOT use *.sql globally)
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Sphinx / docs
+docs/_build/
+docs/build/
+
+# App runtime artifacts (written by the app)
+src/app/data/*.json
