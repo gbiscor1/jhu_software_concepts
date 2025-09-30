@@ -1,0 +1,9 @@
+[MASTER]
+ignore-patterns=\.venv,__pycache__
+init-hook = import sys, os
+
+[MESSAGES CONTROL]
+disable=C0415,C0301
+
+[REPORTS]
+score=yes

@@ -1,0 +1,10 @@
+# .coveragerc
+[run]
+source = src
+omit =
+    src/scripts/ping_db.py
+    src/run.py
+    src/scripts/__init__.py
+
+[report]
+show_missing = True

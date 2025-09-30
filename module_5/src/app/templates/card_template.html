@@ -1,0 +1,12 @@
+{# module_3/app/templates/card_template.html #}
+{% macro card(title, subtitle=None, body=None) -%}
+  <section class="card">
+    <header class="card-head">
+      <h2 class="card-title">{{ title }}</h2>
+      {% if subtitle %}<div class="card-subtitle">{{ subtitle }}</div>{% endif %}
+    </header>
+    <div class="card-body">
+      {{ body | safe }}
+    </div>
+  </section>
+{%- endmacro %}
